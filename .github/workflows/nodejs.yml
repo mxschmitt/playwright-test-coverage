@@ -18,12 +18,6 @@ jobs:
       run: npx playwright install
     - name: Install the operating-system dependencies
       run: npx playwright install-deps
-    - name: Start the web-server
-      run: |
-        npm run start &
-        npx wait-on http://localhost:3000
-      env:
-        USE_BABEL_PLUGIN_ISTANBUL: 1
     - name: Run end-to-end tests
       run: npm test
     - run: npx nyc report --reporter=lcovonly

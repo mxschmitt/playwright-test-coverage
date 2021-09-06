@@ -1,7 +1,7 @@
 import { test } from './baseFixtures';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("http://localhost:3000")
+  await page.goto("/")
 })
 
 test('use Turquoise as a default background color', async ({ page }) => {
