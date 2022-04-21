@@ -21,7 +21,6 @@ jobs:
       - name: Run end-to-end tests
         run: npm test
       - run: ls -la
-      - run: npx nyc report --reporter=text
       - run: npx nyc report --reporter=lcovonly
       - name: Upload to Coveralls
         uses: coverallsapp/github-action@master

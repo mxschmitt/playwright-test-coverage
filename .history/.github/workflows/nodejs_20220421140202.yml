@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+    - run: npm ci
+    - name: Install the browsers
+      run: npx playwright install
+    - name: Install the operating-system dependencies
+      run: npx playwright install-deps
+    - name: Run end-to-end tests
+      run: npm test
+    - run: npx nyc report --reporter=lcovonly
+    - name: Upload to Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
