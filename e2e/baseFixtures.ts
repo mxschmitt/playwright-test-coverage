@@ -24,7 +24,6 @@ export const test = baseTest.extend({
     await use(context);
     for (const page of context.pages()) {
       await page.evaluate(() => (window as any).collectIstanbulCoverage(JSON.stringify((window as any).__coverage__)))
-      await page.close();
     }
   }
 });
