@@ -2,8 +2,8 @@ import { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
   webServer: {
-    command: 'npm run start',
-    port: 3000,
+    command: 'npm run dev',
+    port: 5173,
     env: {
       USE_BABEL_PLUGIN_ISTANBUL: '1',
     },

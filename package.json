@@ -3,27 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@playwright/test": "^1.18.0",
-    "@types/node": "^17.0.12",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "babel-plugin-istanbul": "^6.1.1",
-    "customize-cra": "^1.0.0",
+    "@playwright/test": "^1.37.1",
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
     "nyc": "^15.1.0",
-    "react": "^17.0.2",
-    "react-app-rewired": "^2.1.11",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.5"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-istanbul": "^5.0.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "npx playwright test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "preview": "vite preview",
+    "test": "playwright test"
   },
   "browserslist": {
     "production": [
