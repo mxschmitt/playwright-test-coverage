@@ -3,11 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/mxschmitt/playwright-test-coverage/badge.svg)](https://coveralls.io/github/mxschmitt/playwright-test-coverage)
 [![CI](https://github.com/mxschmitt/playwright-test-coverage/actions/workflows/nodejs.yml/badge.svg)](https://github.com/mxschmitt/playwright-test-coverage/actions/workflows/nodejs.yml)
 
-This example demonstrates how to use [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) to collect coverage data during runtime with your end-to-end tests which will be stored on the filesystem. When applying the shown parts, you are able to view the coverage report e.g. as HTML, or convert it to the `lcov` format for upload to [Coveralls](https://coveralls.io/) or other similar providers. In this example, we are using GitHub Actions to run the tests and upload them to Coveralls.
+This example demonstrates how to use [vite-plugin-istanbul](https://github.com/ifaxity/vite-plugin-istanbul) to collect coverage data during runtime with your end-to-end tests which will be stored on the filesystem. When applying the shown parts, you are able to view the coverage report e.g. as HTML, or convert it to the `lcov` format for upload to [Coveralls](https://coveralls.io/) or other similar providers. In this example, we are using GitHub Actions to run the tests and upload them to Coveralls.
 
 ## Prerequisites
 
-- The web application which you are using needs to have [`babel-plugin-istanbul`](https://github.com/istanbuljs/babel-plugin-istanbul) configured during the build process.
+- The web application which you are using needs to have [`vite-plugin-istanbul`](https://github.com/ifaxity/vite-plugin-istanbul) configured during the build process.
 - It's recommended to only enable it during end-to-end testing, for example by checking a variable to determine if it should be enabled.
 - You could also add it only when the dev server `NODE_ENV=development` is used.
 
@@ -27,7 +27,10 @@ Helpful commands are the following:
 
 ## Used tools
 
-- [create-react-app](https://create-react-app.dev) - tooling and bundling for React
-- [react-app-rewired](https://www.npmjs.com/package/react-app-rewired) - to modify the React babel config without ejecting it
-- [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) - to add coverage information
+- [vite](https://vitejs.dev/) - tooling and bundling for React
+- [vite-plugin-istanbul](https://github.com/ifaxity/vite-plugin-istanbul) - to add coverage information
 - [nyc](https://github.com/istanbuljs/nyc) - Istanbul CLI to generate lcov coverage
+
+## Using create-react-app / Webpack
+
+See this archived version in the [`create-react-app`](https://github.com/mxschmitt/playwright-test-coverage/tree/create-react-app) branch.
