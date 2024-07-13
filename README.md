@@ -31,6 +31,10 @@ Helpful commands are the following:
 - [vite-plugin-istanbul](https://github.com/ifaxity/vite-plugin-istanbul) - to add coverage information
 - [nyc](https://github.com/istanbuljs/nyc) - Istanbul CLI to generate lcov coverage
 
+## Using with [@playwright/experimental-ct-react](https://playwright.dev/docs/test-components)
+
+See this version in the [`ct-react-vite`](https://github.com/mxschmitt/playwright-test-coverage/tree/ct-react-vite) branch.
+
 ## Using create-react-app / Webpack
 
 See this archived version in the [`create-react-app`](https://github.com/mxschmitt/playwright-test-coverage/tree/create-react-app) branch.
