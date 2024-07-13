@@ -28,7 +28,7 @@ const App = () => {
         >
           Learn React
         </a>
-        <span>Current color: {backgroundColor}</span>
+        <span>Current color: <span data-testid="current-color">{backgroundColor}</span></span>
         <div className="btn-group-colors">
           <button onClick={handleMakeTurquoise}>Turquoise</button>
           <button onClick={handleMakeRed}>Red</button>

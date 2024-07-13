@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
-import { test as baseTest } from '@playwright/test';
+import { test as baseTest } from '@playwright/experimental-ct-react';
 
 const istanbulCLIOutput = path.join(process.cwd(), '.nyc_output');
 
@@ -28,4 +28,5 @@ export const test = baseTest.extend({
   }
 });
 
-export const expect = test.expect;
+export { expect} from '@playwright/experimental-ct-react'
+

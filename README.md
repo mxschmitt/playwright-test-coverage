@@ -1,4 +1,4 @@
-# Use [Istanbul](https://istanbul.js.org) coverage collection with [Playwright Test](https://playwright.dev/docs/test-intro)
+# Use [Istanbul](https://istanbul.js.org) coverage collection with [Playwright Component Testing (React)](https://playwright.dev/docs/test-components)
 
 [![Coverage Status](https://coveralls.io/repos/github/mxschmitt/playwright-test-coverage/badge.svg)](https://coveralls.io/github/mxschmitt/playwright-test-coverage)
 [![CI](https://github.com/mxschmitt/playwright-test-coverage/actions/workflows/nodejs.yml/badge.svg)](https://github.com/mxschmitt/playwright-test-coverage/actions/workflows/nodejs.yml)
@@ -7,15 +7,14 @@ This example demonstrates how to use [vite-plugin-istanbul](https://github.com/i
 
 ## Prerequisites
 
-- The web application which you are using needs to have [`vite-plugin-istanbul`](https://github.com/ifaxity/vite-plugin-istanbul) configured during the build process.
-- It's recommended to only enable it during end-to-end testing, for example by checking a variable to determine if it should be enabled.
-- You could also add it only when the dev server `NODE_ENV=development` is used.
+- ~~The web application which you are using needs to have [`vite-plugin-istanbul`](https://github.com/ifaxity/vite-plugin-istanbul) configured during the build process.~~ This is not needed anymore in the Vite App, since we do it inside the `playwright-ct.config.ts` under `ctViteConfig` instead.
 
 ## Usage
 
-- Place [`baseFixtures.ts`](https://github.com/mxschmitt/playwright-test-coverage/blob/main/e2e/baseFixtures.ts) into your test directory. Instead of requiring `@playwright/test` to get the test object, use `./baseFixtures`.
+- Place [`baseFixtures.ts`](https://github.com/mxschmitt/playwright-test-coverage/blob/ct-react-vite/e2e/baseFixtures.ts) into your test directory. Instead of requiring `@playwright/experimental-ct-react` to get the test object, use `./baseFixtures`.
+- Modify the `playwright-ct.config.ts` so it includes the Istanbul plugin in the `ctViteConfig`.
 - This will collect the corresponding coverage files into the `.nyc_output` directory which can be used from the [Istanbul CLI](https://github.com/istanbuljs/nyc).
-- For an example test, see [App.test.ts](/e2e/App.test.ts)
+- For an example test, see [App.test.ts](/src/App.test.tsx)
 
 ## Coverage formats
 

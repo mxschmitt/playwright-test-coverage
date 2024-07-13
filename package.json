@@ -3,23 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@playwright/test": "^1.41.1",
-    "@types/node": "^20.11.8",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@vitejs/plugin-react": "^4.2.1",
-    "nyc": "^15.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^5.3.3",
-    "vite": "^4.5.2",
-    "vite-plugin-istanbul": "^5.0.0"
+    "@playwright/experimental-ct-react": "^1.45.1",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "nyc": "^17.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vite-plugin-istanbul": "^6.0.2"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc",
     "preview": "vite preview",
-    "test": "playwright test"
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "browserslist": {
     "production": [
