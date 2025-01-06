@@ -11,7 +11,7 @@ This example demonstrates how to use [vite-plugin-istanbul](https://github.com/i
 
 ## Usage
 
-- Place [`baseFixtures.ts`](https://github.com/mxschmitt/playwright-test-coverage/blob/ct-react-vite/e2e/baseFixtures.ts) into your test directory. Instead of requiring `@playwright/experimental-ct-react` to get the test object, use `./baseFixtures`.
+- Place [`baseFixtures.ts`](https://github.com/mxschmitt/playwright-test-coverage/blob/ct-react-vite/src/baseFixtures.ts) into your test directory. Instead of requiring `@playwright/experimental-ct-react` to get the test object, use `./baseFixtures`.
 - Modify the `playwright-ct.config.ts` so it includes the Istanbul plugin in the `ctViteConfig`.
 - This will collect the corresponding coverage files into the `.nyc_output` directory which can be used from the [Istanbul CLI](https://github.com/istanbuljs/nyc).
 - For an example test, see [App.test.ts](/src/App.test.tsx)
